@@ -2,9 +2,7 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import { useCallback, useEffect, useState } from "react";
 
 import {
-  githubLinkStyles,
   logoStyles,
-  sourceCodeStyles,
   wrapperStyles,
 } from "./App.css";
 import { LangSelector } from "./components/LangSelector/LangSelector";
@@ -90,25 +88,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className={sourceCodeStyles}>
-        <a
-          href="https://github.com/semanser/langusto"
-          className={githubLinkStyles}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="github-mark.svg" />
-          Source code
-        </a>
-      </div>
       <div className={wrapperStyles}>
         <img src="logo.png" alt="Logo" className={logoStyles} />
         <LangSelector />
         <WordCard word={currentWord} onAnswer={handleAnswer} />
         <Progress total={words.length} learned={learned.length} />
       </div>
-    </>
   );
 }
 

@@ -1,8 +1,9 @@
 {
-  "name": "langusto",
+  "name": "lingohub",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author":"Mohd Faiz",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
